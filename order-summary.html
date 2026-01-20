@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>סיכום הזמנה - מאפיית הלחם החם</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">מאפיית הלחם החם 🍞</div>
+        <ul>
+            <li><a href="index.html">בית</a></li>
+            <li><a href="menu.html">תפריט</a></li>
+            <li><a href="contact.html">הזמנות</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-content" style="text-align: center; margin-top: 50px;">
+        <h1>תודה על הזמנתך!</h1>
+        
+        <div style="background: white; padding: 20px; border-radius: 10px; display: inline-block; text-align: right; border: 2px solid #8b5a2b; min-width: 300px;">
+            <h3>פרטי ההזמנה שנקלטו:</h3>
+            <p><strong>שם:</strong> <span id="res-name"></span></p>
+            <p><strong>טלפון:</strong> <span id="res-phone"></span></p>
+            <p><strong>מה הזמנת:</strong></p>
+            <p id="res-msg" style="font-style: italic; color: #555;"></p>
+        </div>
+
+        <br><br>
+        <button onclick="window.location.href='index.html'" style="padding: 10px 20px; cursor: pointer; background-color: #8b5a2b; color: white; border: none; border-radius: 5px;">חזרה לדף הבית</button>
+    </div>
+
+    <script>
+        // הקוד הזה רץ ברגע שהדף נטען ושואב את הנתונים מהזיכרון
+        window.onload = function() {
+            // שליפת הנתונים ששמרנו ב-script.js
+            const savedName = localStorage.getItem("userName");
+            const savedPhone = localStorage.getItem("userPhone");
+            const savedMsg = localStorage.getItem("userMsg");
+
+            // בדיקה שהנתונים קיימים ואז הצגתם בתוך ה-span המתאים
+            if (savedName) {
+                document.getElementById("res-name").innerText = savedName;
+            }
+            if (savedPhone) {
+                document.getElementById("res-phone").innerText = savedPhone;
+            }
+            if (savedMsg) {
+                document.getElementById("res-msg").innerText = savedMsg;
+            }
+        };
+    </script>
+
+</body>
+</html>

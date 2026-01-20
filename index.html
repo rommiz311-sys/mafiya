@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>דף הבית - מאפיית הלחם החם</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area" style="display: flex; align-items: center; gap: 15px;">
+            <div class="logo">מאפיית הלחם החם 🍞</div>
+            <a href="login.html" onclick="logout()" style="color: #ff4d4d; text-decoration: none; font-size: 0.8em; border: 1px solid #ff4d4d; padding: 2px 6px; border-radius: 4px; white-space: nowrap;">יציאה</a>
+        </div>
+        
+        <ul>
+            <li><a href="index.html" class="active">בית</a></li>
+            <li><a href="menu.html">תפריט</a></li>
+            <li><a href="contact.html">הזמנות</a></li>
+            <li><a href="order-summary.html">ההזמנה שלי 📋</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>ברוכים הבאים למאפייה הכי טובה בעיר</h1>
+        <p>אפייה טרייה יומיומית מחומרים טבעיים בלבד</p>
+        
+        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+            <button onclick="window.location.href='menu.html'">לצפייה בתפריט</button>
+            <button onclick="window.location.href='order-summary.html'" style="background-color: #8b5a2b; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">מה הזמנתי?</button>
+        </div>
+    </header>
+
+    <div class="about-section">
+        <h2>קצת עלינו</h2>
+        <p>המאפייה שלנו נוסדה בשנת 1990 ומאז מספקת מאפים טריים לכל השכונה.</p>
+        
+        <div style="margin: 20px 0; padding: 15px; border-top: 1px solid #ddd;">
+             <p>רוצה לראות את פרטי ההזמנה האחרונה שביצעת?</p>
+             <button onclick="window.location.href='order-summary.html'">צפייה בסיכום ההזמנה</button>
+        </div>
+
+        <div class="atmosphere-gallery">
+            <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=300" alt="לחמים טריים">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=300" alt="תנור אפייה">
+            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=300" alt="קינוחים">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300" alt="אווירה">
+        </div>
+    </div>
+
+    <footer>© כל הזכויות שמורות - פרויקט גמר 2026</footer>
+    <script src="script.js"></script>
+</body>
+</html>

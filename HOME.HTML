@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>כניסה למערכת - מאפיית הלחם החם</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+    <div class="login-container">
+        <h1>מאפיית הלחם החם 🍞</h1>
+        <h2>כניסה למערכת</h2>
+        <form onsubmit="return performLogin(event)">
+            <label>שם משתמש:</label>
+            <input type="text" id="username" placeholder="שם משתמש" required>
+            
+            <label>סיסמה:</label>
+            <input type="password" id="password" placeholder="סיסמה" required>
+            
+            <button type="submit">התחבר</button>
+            <p id="error-msg" style="color:red; display:none;">פרטים שגויים, נסה שוב</p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

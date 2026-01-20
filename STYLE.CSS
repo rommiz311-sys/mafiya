@@ -1,0 +1,167 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf6e3;
+    color: #4a3b32;
+}
+
+/* עיצוב התפריט */
+ nav {
+    background-color: #8b5a2b;
+    color: white;
+    display: flex;
+    /* השורה הבאה הופכת את הסדר: הלוגו לשמאל והתפריט לימין */
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    /* מוודא שגם סדר הקישורים בתוך הרשימה נכון */
+    flex-direction: row; 
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: #6d421b; /* סימון הדף הנוכחי */
+}
+
+/* עיצוב דף כניסה */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e6d2b5;
+}
+
+.login-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 300px;
+}
+
+/* עיצוב כותרת ראשית */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e6d2b5;
+    border-bottom: 5px solid #8b5a2b;
+}
+
+/* עיצוב גלריה */
+.page-content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 250px;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* עיצוב טפסים */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: right;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #8b5a2b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #6d421b;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4a3b32;
+    color: white;
+    margin-top: 50px;
+}
+
+/* עיצוב גלריית האווירה */
+.about-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fdf6e3;
+}
+
+.atmosphere-gallery {
+    display: flex;
+    justify-content: center; /* מרכז את התמונות */
+    gap: 15px; /* רווח בין התמונות */
+    margin-top: 30px;
+    flex-wrap: wrap; /* מאפשר לתמונות לרדת שורה במסכים קטנים */
+}
+
+.atmosphere-gallery img {
+    width: 200px; /* גודל קבוע לכל תמונה */
+    height: 150px;
+    object-fit: cover; /* חותך את התמונה שתתאים בדיוק למסגרת */
+    border-radius: 8px;
+    border: 3px solid #8b5a2b;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease; /* אפקט חלק כשהעכבר עובר */
+}
+
+.atmosphere-gallery img:hover {
+    transform: translateY(-10px); /* התמונה עולה קצת למעלה כשהעכבר עליה */
+}
